@@ -5,10 +5,7 @@ pipeline {
         
             steps {
                sh echo "Hello"
-               sh `pwd`
-                withMaven(maven : 'apache-maven-3.5.2'){
-                        sh "mvn clean compile"
-                }
+                sh pwd
             }
         }
         stage('Test'){
